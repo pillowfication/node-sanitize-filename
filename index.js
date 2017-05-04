@@ -44,7 +44,7 @@ function sanitize(input, replacement) {
     .replace(reservedRe, replacement)
     .replace(windowsReservedRe, replacement)
     .replace(windowsTrailingRe, replacement);
-  return truncate(sanitized, 255);
+  return sanitized; //truncate(sanitized, 255);
 }
 
 function replace(input, replacementMap) {
